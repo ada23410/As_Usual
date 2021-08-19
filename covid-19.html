@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./SVG/favicon-8.png" rel="shortcut icon"/>
+    <title>平常心 As Usual</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .all{
+           width: 100vw;
+           height: 100vh;
+           display: flex;
+        }
+        @media screen and (max-width:375px){
+            .all {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                flex-wrap: wrap;
+                margin: auto;
+            }    
+        }
+        /* nav */
+        .menu {
+            width: 17%;
+            height: 100%;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px #ccc;
+            position: fixed;
+            transition: .5s;
+        }
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 50%;
+        }
+        .links {
+            margin-top: 350px;
+        }
+        .links li {
+            margin-top: 46px;
+        }
+        .links li a {
+            text-decoration: none;
+            color: #14213d;
+        }
+        
+        .social-media {
+            margin-top: 57px;
+            display: flex;
+            align-items: center;            
+        }
+        .social-media i {
+            font-size: 2rem;
+            color: #14213d;
+            letter-spacing: 1rem;
+        }
+        @media screen and (min-width:376px){
+            .mobile-logo {
+                display: none;
+            }
+            .fas {
+                display: none;
+            }
+        }
+        @media screen and (max-width:375px){
+            .menu {
+                width: 50%;
+                box-shadow: 2px 2px 5px #ccc;
+            }
+            .container {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            .logo {
+                width: 50%;
+            }
+            .mobile-header {
+                width: 30%;
+                display: flex;
+                align-items: center;      
+            }
+            .links {
+                margin-top: 0;
+            }
+            .links li {
+            margin-top: 46px;
+             }
+             .social-media {
+                display: none;         
+           }
+            .fas {
+                font-size: 32px;
+                margin: 20px 110px 0 20px;
+                color: #14213d;
+            }
+      
+        }
+       
+        /* main */
+    
+        .main {
+            width: 100%;
+            height: 125%;
+            margin-left: 17%;
+            background-color: #fff;
+        }
+        .box {
+            width: 1200px;
+            height: 700px;
+            margin: auto;
+            margin-top: 100px;
+            
+        }
+        /* main */
+        h1 {
+            text-align: center;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .img-wrap-01{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .img-wrap-01 > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .content-01 {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: flex-end;
+            margin-top: 200px;
+        }
+        .pothogen {
+            width: 40%;
+            margin-left: 10%;
+        }
+        .title {
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color:#14213d;
+            margin-top: -20px;
+            margin-left: -5px;
+        }
+        .point {
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            margin-bottom: 60px;
+            display: block;
+        }
+        .high-light {
+            background: linear-gradient(#ffdd41 60%,#fff 40%);
+            background-size: 440px 42px;
+            margin-bottom: 10px;
+        }
+        .high-light::after {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 30px;
+            background-color:#fff;
+            margin-top: -85px;
+            margin-left: 320px;
+        }
+        p {
+            color: rgb(50, 50, 50);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 14px;
+            line-height: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        p::selection {
+            background-color: #ffe66d;
+        }
+        @media screen and (max-width:375px) {
+            .main {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .box {
+                width: 100%;
+                margin-top: 100px;   
+            }
+            .img-wrap-01{
+                width: 300px;
+                overflow: hidden;
+            }
+            .content-01 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 100px;
+            }
+            .pothogen {
+                width: 80%;
+                margin-left: 0;
+            }
+            p {
+                color: rgb(50, 50, 50);
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 21px;
+                line-height: 2rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-align: justify;
+        }
+        }
+        /* content-02 */
+        .content-02 {
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .host {
+            width: 35%;
+        }
+
+        .img-wrap-02 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin-left: 28%;
+            display: block;
+            background: url(./SVG/covid-16.svg) center no-repeat;
+            /* transition: .3s; */
+        }
+        .img-wrap-02:hover {
+            background:url(./SVG/covid-img-02_1.svg) center no-repeat;
+        }
+
+        @media screen and (max-width:375px){
+            .content-02 {
+                margin-top: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 10%;
+            }
+            .host {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .img-wrap-02 {
+                margin-top: 100px;
+                width: 250px;
+                overflow: hidden;
+                margin-left: 0;
+            }
+        }
+        /* content-03 */
+        .content-03 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;     
+        }
+        .img-wrap-03-1 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-17.svg) center no-repeat;
+        }
+        .img-wrap-03-1:hover {
+            background: url(./SVG/covid-img-03_3.svg) center no-repeat;
+            background-size: contain;
+        }
+        .img-wrap-03-2 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-18.svg) center no-repeat;
+        }
+        .img-wrap-03-2:hover {
+            background: url(./SVG/covid-img-04.svg)center no-repeat;
+            background-size: contain;
+        }
+        .img-wrap-03-3 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-19.svg) center no-repeat;
+        }
+        .img-wrap-03-3:hover {
+            background: url(./SVG/covid-img-05.svg)center no-repeat;
+            background-size: contain;
+        }
+        .img-wrap-03-4 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-20.svg) center no-repeat;
+        }
+        .img-wrap-03-4:hover {
+            background: url(./SVG/covid-img-06_1.svg)center no-repeat;
+            background-size: contain;
+        }
+        .img-wrap-03-5 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-21.svg) center no-repeat;
+        }
+        .img-wrap-03-5:hover {
+            background: url(./SVG/covid-img-07.svg)center no-repeat;
+            background-size: contain;
+        }
+        .img-wrap-03-6 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 4.5%;
+            display: block;
+            background: url(./SVG/covid-22.svg) center no-repeat;
+        }
+        .img-wrap-03-6:hover {
+            background: url(./SVG/covid-img-08_1.svg)center no-repeat;
+            background-size: contain;
+        }
+
+        .img-wrap-03 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .high-light-02 {
+            background: linear-gradient(#ffdd41 60%,#fff 40%);
+            background-size: 440px 42px;
+            margin-bottom: 10px;
+        }
+        .high-light-02::after {
+            content: "";
+            display: block;
+            width: 400px;
+            height: 30px;
+            background-color:#fff;
+            margin-top: -90px;
+            margin-left: 80px;
+        }
+        /* content-04 */
+        .content-04 {
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .img-wrap-04 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .img-wrap-04 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .spread {
+            width: 40%;
+            margin-left: 10%;
+        }
+        .high-light-04 {
+            background: linear-gradient(#ffdd41 60%,#fff 40%);
+            background-size: 440px 42px;
+            margin-bottom: 10px;
+        }
+        .high-light-04::after {
+            content: "";
+            display: block;
+            width: 500px;
+            height: 30px;
+            background-color:#fff;
+            margin-top: -90px;
+            margin-left: 100px;
+        }
+        @media screen and (max-width:375px){
+            .content-04 {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 10%;
+            }
+            .host {
+                width: 100%;
+            }
+            .spread {
+                width: 100%;
+                margin-left: 0;
+            }
+            .img-wrap-04 {
+                margin-top: 100px;
+                width: 300px;
+                overflow: hidden;
+                margin-left: 0;
+            }
+        }   
+        /* content-05 */
+        .content-05 {
+            margin: 200px auto;       
+        }
+        .announce {
+            margin: 0 auto;    
+            width: 90%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 48px;
+            line-height: 3.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            background: linear-gradient(#fff 93%,#14213d 7%);
+            background-size: 200px 60px; 
+            border-right: 10px solid #fff;    
+        }
+        @media screen and (max-width:375px) {
+            .content-05 {
+                margin-top: 100px;
+                padding: 0 10%;
+            }
+        }
+        /* content-06 */
+        .content-06 {
+            margin: 200px 5% 5% 5%;
+        }
+        .infection {
+            width: 40%;
+        }
+        .high-light-06 {
+            background: linear-gradient(#ffdd41 60%,#fff 40%);
+            background-size: 440px 42px;
+        }
+        @media screen and (max-width:375px) {
+            .content-06 {
+                margin: 100px 0 0 0;
+                padding: 0 10%;
+            }
+            .infection {
+                width: 100%;
+            }
+        }
+        /* content-07 */
+        .content-07 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .img-wrap-07 {
+            width: 250px;
+            height: 187.5px;
+            overflow: hidden;
+            margin: 5%;
+        }
+        .img-wrap-07 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50% 50%;
+        }
+        @media screen and (max-width:375px) {
+            .content-07 {
+                justify-content: center;
+            }
+
+        }
+        /* content-08 */
+
+        .content-08 {
+           display: flex;
+    
+        }
+        .p-1 {
+            margin-left: 53%;
+            margin-top: 100px;
+            width: 40%;
+        }   
+        @media screen and (max-width:375px) {
+            .content-08 {
+                width: 100%;
+                justify-content: center; 
+            }
+            .p-1 {
+                width: 100%;
+                padding: 0 10%;
+                margin-left: 0;
+            }
+        }
+        /* content-09 */
+        .content-9 {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;   
+        }
+        .copy-right{
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width:375px) {
+            .copy-right {
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="all">
+        <nav class="menu">
+            <div class="mobile-header">  
+                <i class="fas fa-times"></i>      
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <a href="./home.html"><img src="./SVG/logo.svg" alt=""></a>
+                </div>
+                <ul class="links">
+                        <li class="covid-19">
+                            <a href="./covid-19.html">認識covid-19</a>
+                        </li>
+                        <li class="how">
+                            <a href="./youcando.html">你可以怎麽做？</a>
+                        </li>
+                        <li class="heart">
+                            <a href="./rebuild.html">從「心」打造</a>
+                        </li>
+                </ul>
+                <div class="social-media">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </nav>
+        <i class="fas fa-bars"></i>  
+        <div class="main">
+            <div class="box">
+                <div class="head">
+                    <h1>\ 認識COVID-19 /</h1>
+                </div>
+                <div class="content-01">
+                    <div class="img-wrap-01"><img src="./SVG/covid-img-01.svg" alt=""></div>
+                    <div class="pothogen">
+                        <h3 class="title">病原體樣貌</h3>
+                        <div class="high-light">
+                            <h2 class="point">冠狀病毒科（Coronavirinae, CoV）外表為圓形，在顯微鏡下可看到類似皇冠而得名</h2>
+                        </div>
+                        <p>人類感染冠狀病毒以呼吸道症狀為主，包括鼻塞、流鼻水、咳嗽、發燒等一般上呼吸道感染症狀，但嚴重急性呼吸道症候群冠狀病毒（SARS-CoV）、中東呼吸症候群冠狀病毒（MERS-CoV）與新型冠狀病毒SARS-CoV-2感染後比一般人類冠狀病毒症狀嚴重，部分個案可能出現嚴重的肺炎與呼吸衰竭等。</p>
+                    </div>
+                </div>
+                <div class="content-02">
+                    <div class="host">
+                        <h3 class="title">已知宿主</h3>
+                        <div class="high-light-02">
+                            <h2 class="point">冠狀病毒科的動物宿主最大宗蝙蝠</h2>
+                        </div>
+                        <p>豬、牛、火雞、貓、狗、雪貂等，並有零星的跨物種傳播報告。</p>
+                    </div>
+                    <div class="img-wrap-02">
+                        <!-- <img class="bat" src="./SVG/covid-img-02_1.svg" alt=""> -->
+                    </div>
+                </div>
+                <div class="content-03">
+                    <div class="img-wrap-03-1">
+                        <!-- <img src="./SVG/covid-img-03_3.svg" alt=""> -->
+                    </div>
+                    <div class="img-wrap-03-2">
+                        <!-- <img src="./SVG/covid-img-04.svg" alt=""> -->
+                    </div>
+                    <div class="img-wrap-03-3">
+                        <!-- <img src="./SVG/covid-img-05.svg" alt=""> -->
+                    </div>
+                    <div class="img-wrap-03-4">
+                        <!-- <img src="./SVG/covid-img-06.svg" alt=""> -->
+                    </div>
+                    <div class="img-wrap-03-5">
+                        <!-- <img src="./SVG/covid-img-07.svg" alt=""> -->
+                    </div>
+                    <div class="img-wrap-03-6">
+                        <!-- <img src="./SVG/covid-img-08_1.svg" alt=""> -->
+                    </div>
+                </div>
+                <div class="content-04">
+                    <div class="img-wrap-04"><img src="./SVG/covid-img-09.svg" alt=""></div>
+                    <div class="spread">
+                        <h3 class="title">傳播途徑</h3>
+                        <div class="high-light-04">
+                            <h2 class="point">飛沫、直接或間接觸帶有病毒的口鼻分泌物、或無呼吸道防護下長時間與確診病人處於2公尺內之密閉空間裡</h2>
+                        </div>
+                        <p>人類COVID-19病例，亦可能自糞便檢出SARS-CoV-2核酸陽性，但是否具傳染性，仍待研究證實。</p>
+                    </div>
+                </div>
+                <div class="content-05">
+                    <h3 class="title">潛伏期</h3>
+                    <div class="high-light-05">
+                        <h4 class="announce">世界衛生組織公告，感染新型冠狀病毒SARS-CoV-2至發病之潛伏期為1至14天。</h4>
+                    </div>
+                </div>
+                <div class="content-06">
+                    <div class="infection">
+                        <h3 class="title">感染症狀</h3>
+                        <div class="high-light-06">
+                            <h2 class="point">發燒、乾咳、倦怠，約三分之一會有呼吸急促，其他症狀包括肌肉痛、頭痛、喉嚨痛、腹瀉等，另有個案出現嗅覺或味覺喪失</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-07">
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-10_1.svg" alt="">
+                    </div>
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-11.svg" alt="">
+                    </div>
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-12.svg" alt="">
+                    </div>
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-13.svg" alt="">
+                    </div>
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-14.svg" alt="">
+                    </div>
+                    <div class="img-wrap-07">
+                        <img src="./SVG/covid-img-15.svg" alt="">
+                    </div>
+                </div>
+                <div class="content-8">
+                    <p class="p-1">依據目前流病資訊，患者多數能康復，少數患者嚴重時將進展至嚴重肺炎、呼吸道窘迫症候群或多重器官衰竭、休克等，也會死亡。死亡個案多具有潛在病史，如糖尿病、慢性肝病、腎功能不全、心血管疾病等。報告指出，約有14%出現嚴重症狀需住院與氧氣治療，5%需加護病房治療。</p>
+                </div>
+                <div class="content-9">
+                    <p class="copy-right">Copyright © 2021 Chia Ying </p>
+                </div>    
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            // nav
+             $('.fas').on('click',function(){
+               console.log('hi');
+               $('.menu').toggle();
+           });
+            //content-02
+           
+           
+        </script>
+    
+</body>
+</html>

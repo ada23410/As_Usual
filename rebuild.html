@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./SVG/favicon-8.png" rel="shortcut icon"/>
+    <title>平常心 As Usual</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        .all{
+           width: 100vw;
+           height: 100vh;
+           display: flex;
+        }
+        @media screen and (max-width:375px){
+            .all {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                flex-wrap: wrap;
+                margin: auto;
+            }    
+        }
+        .menu {
+            width: 17%;
+            height: 100%;
+            background-color: #f9f9f9;
+            position: fixed;
+            box-shadow: 2px 2px 5px #ccc; 
+        }
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 50%;
+        }
+        .links {
+            margin-top: 350px;
+        }
+        .links li {
+            margin-top: 46px;
+        }
+        .links li a {
+            text-decoration: none;
+            color: #14213d;
+        }
+        
+        .social-media {
+            margin-top: 57px;
+            display: flex;
+            align-items: center;            
+        }
+        .social-media i {
+            font-size: 2rem;
+            color: #14213d;
+            letter-spacing: 1rem;
+        }
+        @media screen and (min-width:376px){
+            .mobile-logo {
+                display: none;
+            }
+            .fa-bars,.fa-times{
+                display: none;
+            }
+        }
+        @media screen and (max-width:375px){
+            .menu {
+                width: 50%;
+                box-shadow: 2px 2px 5px #ccc;
+                z-index: 99999;
+            }
+            .container {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            .logo {
+                width: 50%;
+            }
+            .mobile-header {
+                width: 30%;
+                display: flex;
+                align-items: center;      
+            }
+            .links {
+                margin-top: 0;
+            }
+            .links li {
+            margin-top: 46px;
+             }
+             .social-media {
+                display: none;         
+           }
+            .fa-bars ,.fa-times{
+                font-size: 32px;
+                margin: 20px 110px 20px 20px;
+                color: #14213d;
+            }
+      
+        }
+        /* main */
+        .main {
+            width: 100%;
+            margin-left: 17%;
+            background:#fff;
+        }
+        .box {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;    
+        }
+        @media screen and (max-width:375px) {
+            .main {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .box {
+                width: 100%;
+                margin-top: 100px;   
+            }
+        }
+        /* head */
+        h1 {
+            text-align: center;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* content-01 */
+        .content-01 {
+            margin-top: 200px;
+        }
+        .wrap {
+            border: 3px solid #ffdd41;
+            box-shadow: 2px 2px 5px #ccc;
+            border-radius: 10px;
+            width: 840px;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+
+        }
+     
+        ul.img-wrap {
+            list-style: none;
+            padding-left: 0;
+            width: 4200px;
+            height: 100%;
+            display: flex;
+            transform: translateX(-1680px);
+            transition: .5s;
+        }
+        li {
+            flex-shrink: 1;
+            width: 100%;
+            height: 100%;
+        }
+        li > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .slider-dots {
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .slider-dots li{
+            width: 40px;
+            height: 5px;
+            border: 1px solid #ffdd41;
+            background-color: #ffdd41;
+            margin: 0 4px;
+        }
+        .left-arrow-area,
+        .right-arrow-area{
+            /* 相疊箭頭在一起 */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            /* background-color: rgba(0, 255, 255, 0.434); */
+            /* 滑鼠移到色塊範圍及會出現鼠標 */
+            cursor: pointer;
+            /* 把箭頭置中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-arrow-area {
+            left: 0;
+        }
+        .right-arrow-area {
+            right: 0;
+        }
+        .fa-chevron-left,.fa-chevron-right {
+            color:#ffdd41;
+            font-size: 2rem;
+        }
+        @media screen and (max-width:375px) {
+            .content-01 {
+            margin-top: 100px;
+            }
+            .wrap {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            }
+            li > img {
+            width: 50%;
+        
+            object-fit: cover;
+            object-position: center;
+        }
+
+        }
+        /* content-2 */
+        .content-02 {
+            margin-top: 100px;
+            margin-bottom: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card-01 {
+            width: 286px;
+            height: 406px;
+            border: 3px solid #ffdd41;
+            box-shadow: 2px 2px 5px #ccc;
+            border-radius: 10px;
+            margin: 40px;
+            background-color: #fff;
+        }
+
+        .img-wrap-01 {
+            width: 280px;
+            height: 210px;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+        }
+        .img-wrap-01 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .heading {
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .article-01 {
+            width: 250px;
+            height: 90px;
+        }
+        .p-01 {
+            color: rgb(50, 50, 50);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 14px;
+            line-height: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: justify;
+            margin-bottom: 10px;
+            overflow:hidden;
+            white-space: nowrap;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+        .time,.author  {
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        /* content-04 */
+        .content-04 {
+            margin-top: 200px;
+        }
+        .recommend-01 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+            border-bottom: 1px solid #14213d;
+        }
+        .box-01 {
+            width: 45%;
+        }
+        .img-wrap-02 {
+            margin-right: 40px;
+            width: 250px;
+            height: 230px;
+            overflow: hidden;
+        }
+        .img-wrap-02 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color:#14213d;
+            margin-top: -20px;
+            margin-left: -5px;
+        }
+        .point {
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .article-02{
+            width: 100%;
+            height: 10%;
+            align-items: flex-end;
+        }
+        .p-02 {
+            color: rgb(50, 50, 50);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 14px;
+            line-height: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: justify;
+            overflow:hidden;
+            white-space: nowrap;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+        @media screen and (max-width:375px) {
+            .content-04 {
+            margin-top: 100px;
+            }
+            .recommend-01 {
+                display: flex;
+                flex-direction: column;
+            }
+            .box-01 {
+                width: 100%;
+                padding: 0 10%;
+                margin-top: 60px;
+            }
+            .copy-rigth {
+                margin-bottom: 50px;
+            }
+        
+
+        }
+        /* content-05 */
+        .content-05 {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center; 
+        }   
+        .copy-rigth {
+            margin-bottom: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="all">
+        <nav class="menu">
+            <div class="mobile-header">  
+                <i class="fas fa-times"></i>      
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <a href="./home.html"><img src="./SVG/logo.svg" alt=""></a>
+                </div>
+                <ul class="links">
+                        <li class="covid-19">
+                            <a href="./covid-19.html">認識covid-19</a>
+                        </li>
+                        <li class="how">
+                            <a href="./youcando.html">你可以怎麽做？</a>
+                        </li>
+                        <li class="heart">
+                            <a href="./rebuild.html">從「心」打造</a>
+                        </li>
+                </ul>
+                <div class="social-media">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </nav>
+        <i class="fas fa-bars"></i>    
+        <div class="main">
+            <div class="box">
+                <div class="head">
+                    <h1>\ 從「心」打造 /</h1>
+                </div>
+                <div class="content-01">
+                    <div class="wrap">
+                        <ul class="img-wrap">
+                            <li>
+                                <img src="./SVG/slider-01_7.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="./SVG/slider-02_1.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="./SVG/slider-03_5.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="./SVG/slider-04_2.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="./SVG/slider-05.svg" alt="">
+                            </li>
+                        </ul>
+                        <ul class="slider-dots">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                       </ul>
+                        <div class="left-arrow-area">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="right-arrow-area">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-02">
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/看電視.jpeg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">疫情宅在家，每天看電視不要超過2小時</h2>
+                            <div class="article-01">
+                                <p class="p-01">疫情緊繃期間，最好的自保與互助之道就是減少人際交流。但國外研究也提醒大人們，宅在家的這段期間，再怎麼煩悶，每天看電視的時間也不要超過2小時。</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/防疫食物.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">防疫4大生活飲食指南：不焦慮、補充蔬果蛋白質</h2>
+                            <div class="article-01">
+                                <p class="p-01">台灣的疫情在過去一周急轉直下，新增本土病例連續好幾天以3位數的幅度增加，疫情從北部擴及南部縣市，全國皆正式進入第三級警戒。外出得戴口罩、噴酒精，進去商店得配合實聯制。</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/減重.jpeg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">居家防疫期間，回歸簡單生活，減重13公斤</h2>
+                            <div class="article-01">
+                                <p class="p-01">「政府一封城，嘴巴就開門。」這可不是玩笑話而已。6月初，美國哈佛（Harvard）大學發布一則簡訊，去年「就地避難」政策生效後，50歲以上大人每月穩定增重約0.6公斤；4個月下來，身上多掛了2.7公斤的肉！</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/微波料理.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">每天3餐傷透腦筋？微波料理始祖推薦簡單3料理</h2>
+                            <div class="article-01">
+                                <p class="p-01">日本營養專家、日本「微波爐料理」第一人村上祥子一人獨居，疫情期間她進一步簡化繁瑣的料理工序，推廣樂活到百歲的簡單料理，只要把握6大原則，善用罐頭和微波爐，每個人都能輕鬆做出好料理</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/水果捲.jpeg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">防疫在家適合與毛孩共享的美味料理：水果肉片捲</h2>
+                            <div class="article-01">
+                                <p class="p-01">正值炎熱夏季，加上疫情警戒，日常生活及採買多為不便，如何利用簡單的食材在家烹調，提升家人和毛孩的免疫能力，就成了重要課題。這道「水果肉片捲」非常適合夏天，清爽不膩口又能補充營養。其中地瓜膳食纖維豐富，能降低膽固醇，兼具抗癌、抗氧化功效，不僅可幫助毛孩補充醣類，更含有豐富維生素 C 、鈣質、葉酸及β-胡蘿蔔素。整道料理吃起來清甜爽口又有飽足感，還能補充維生素與水分，很適合和毛孩、家人一起分享。</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="card-01">
+                        <div class="img-wrap-01">
+                            <img src="./SVG/精油.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="heading">8款精油有助安定心神、提升免疫力</h2>
+                            <div class="article-01">
+                                <p class="p-01">全球新冠疫情愈演愈烈，除了戴口罩，還可以做甚麼避免病毒上身呢？其實對身體健康的人來說，更好的預防措施其實就是營養均衡、睡眠充足不熬夜、維持平和的心情不要過分憂心。平時勤洗手，去人多、密閉且長時間待著的公共場所以及醫院都要戴口罩。</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="time">2021 / 06 / 19 </span>
+                                <span class="author"> 作者 / ooo</span>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="content-03">
+                    <div class="heading">
+                        <h1>\ WFH儀式感 /</h1>
+                    </div>
+                </div>
+                <div class="content-04">
+                    <div class="recommend-01">
+                        <div class="img-wrap-02">
+                            <img src="./SVG/img-1621926779-84269.jpeg" alt="">
+                        </div>
+                        <div class="box-01">
+                            <h3 class="title">虛擬辦公室</h3>
+                            <h4 class="point">Gather Town</h4>
+                            <div class="article-02">
+                                <p class="p-02">遠距工作後第一個會面臨的就是，大家不再隨時可以走到別人座位旁邊隨口聊兩句，或是遇到問題就直接開口問，Gather 創造了一個虛擬的辦公室，而且這個辦公室就像以前Gameboy裡神奇寶貝遊戲一樣，復古又可愛的風格。以下列出我認為Gather很有趣又特別的地方：</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-01">
+                        <div class="img-wrap-02">
+                            <img src="./SVG/team_flow.jpeg" alt="">
+                        </div>
+                        <div class="box-01">
+                            <h3 class="title">虛擬辦公室</h3>
+                            <h4 class="point">Teamflow</h4>
+                            <div class="article-02">
+                                <p class="p-02">相較於 Gather ，Teamflow 在使用上較為迅速方便，能夠快速建構虛擬辦公室，介面使用上也較簡潔明瞭，只要靠左邊一鍵即可完成。此外，Teamflow 除了可用內建圖外，他還可以自己上傳 PNG 檔案，創造屬於自己的空間，並且具備介面比 Gather 更精緻的德州撲克以及俄羅斯方塊對戰遊戲，無論是娛樂、休閒以及工作皆兼具。不過，就工作層面來說，Teamflow 比 Gather 更適合辦公使用。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-01">
+                        <div class="img-wrap-02">
+                            <img src="./SVG/asia-taiwan-workfromhome-online-meeting_gartic02.gif" alt="">
+                        </div>
+                        <div class="box-01">
+                            <h3 class="title">線上小遊戲</h3>
+                            <h4 class="point">Gartic Phone</h4>
+                            <div class="article-02">
+                                <p class="p-02">Gartic Phone是網頁版的畫圖遊戲，可以邀請朋友們先加入多人語音通話後，再一起出題來個你畫我猜的遊戲，不須下載、打開電腦就可以玩超級方便，從少人數到10人以上的多人連線，越多人參加遊戲，拿到別人出的題目也會更多樣、更有趣。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content-05">
+                    <p class="copy-rigth">Copyright © 2021 Chia Ying </p>
+                </div>     
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+             // nav
+             $('.fas').on('click',function(){
+               console.log('hi');
+               $('.menu').toggle();
+           });
+           // 設定一開始在第0頁
+           let nowPage = 0;
+        $('.slider-dots li').eq(nowPage).css('background', '#fff');
+
+        $('.slider-dots li').hover(function () {
+            console.log('hi');
+            console.log('li index:', $(this).index() * -845 + 'px');
+
+            // 字串相加，ES5 的時候就是這樣，直接用運算符號 + 去把字串連在一起
+            // $('.img-wrap').css('transform', 'translateX(' + positionX + 'px)')
+
+            // ES6 改用模版字串來防止容易寫錯的困擾，字串是一個模版，中間可以任意塞變數進去。
+            // 1.把字串原本的單引號(或雙引號) 改成使用反引號(`)來表示字串的範圍
+            // 2.把我們想要放變數的地方，用 ${} 放進去字串中的任意位置。
+            nowPage = $(this).index();
+            changePage();
+            // const positionX = $(this).index() * -800;
+            // $('.img-wrap').css('transform', `translateX(${positionX}px)`);
+
+        });
+
+        $('.left-arrow-area').click(function () {
+            console.log('left-arrow-area clicked');
+
+            // 條件判斷式，給定一個條件，當他為 true 的時候
+            // 才可以執行大括號裡面的程式
+            // if (nowPage > 0) {
+            //     nowPage = nowPage - 1;
+            // }
+
+            // 現在的 js 寫法
+            // 利用 return 的特性，直接結束這個 function
+            // 這裡的 if 條件，寫的是不執行的情況
+            if (nowPage === 0) return;
+
+            // 以下，就是要執行的程式碼。
+            nowPage = nowPage - 1;
+            console.log('nowPage', nowPage);
+
+            changePage();
+        });
+        $('.right-arrow-area').click(function () {
+            console.log('right-arrow-area clicked');
+            if (nowPage === 4) return;
+            nowPage = nowPage + 1;
+            console.log('nowPage', nowPage);
+
+            changePage();
+        });
+
+        // 模組化的概念
+        // 當我們寫程式，發現有一直重複的地方的時候
+        // 我們會想要重構，把程式碼模組化精簡它
+        function changePage() {
+            // 改白色的指示點
+            $('.slider-dots li').eq(nowPage).css('background', '#fff').siblings().css('background', 'transparent');
+
+            // 改變圖片
+            const positionX = nowPage * -845;
+            $('.img-wrap').css('transform', `translateX(${positionX}px)`);
+        }
+        </script>
+    
+</body>
+</html>

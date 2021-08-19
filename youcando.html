@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./SVG/favicon-8.png" rel="shortcut icon"/>
+    <title>平常心 As Usual</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .all{
+           width: 100vw;
+           height: 100vh;
+           display: flex;
+        
+        }
+        @media screen and (max-width:375px){
+            .all {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                flex-wrap: wrap;
+                margin: auto;
+            }    
+        }
+        /* nav-bar */
+        .menu {
+            width: 17%;
+            height: 100%;
+            background-color: #f9f9f9;
+            position: fixed;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 50%;
+        }
+        .links {
+            margin-top: 350px;
+        }
+        .links li {
+            margin-top: 46px;
+        }
+        .links li a {
+            text-decoration: none;
+            color: #14213d;
+        }
+        
+        .social-media {
+            margin-top: 57px;
+            display: flex;
+            align-items: center;            
+        }
+        .social-media i {
+            font-size: 2rem;
+            color: #14213d;
+            letter-spacing: 1rem;
+        }
+        @media screen and (min-width:376px){
+            .mobile-logo {
+                display: none;
+            }
+            .fa-bars,.fa-times {
+                display: none;
+            }
+        }
+        @media screen and (max-width:375px){
+            .menu {
+                width: 50%;
+                box-shadow: 2px 2px 5px #ccc;
+                z-index: 99999;
+            }
+            .container {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            .logo {
+                width: 50%;
+            }
+            .mobile-header {
+                width: 30%;
+                display: flex;
+                align-items: center;      
+            }
+            .links {
+                margin-top: 0;
+            }
+            .links li {
+            margin-top: 46px;
+             }
+             .social-media {
+                display: none;         
+           }
+           .fa-bars,.fa-times {
+                font-size: 32px;
+                margin: 20px 110px 0 20px;
+                color: #14213d;
+            }
+      
+        }
+        /* main */
+        .main {
+            width: 100%;
+            height: 100%;
+            margin-left: 17%;
+            
+        }
+        .box {
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 100px;        
+        }
+        @media screen and (max-width:375px) {
+            .main {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .box {
+                width: 100%;
+                margin-top: 100px;   
+            }
+        }
+        /* head */
+        h1 {
+            text-align: center;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* content-01 */
+        .content-01 {
+            margin-top: 200px;
+        }
+        .prevent-01 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-01 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-right: 10%;
+        }
+        .img-wrap-01 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img-wrap-01 > img {
+            object-fit: contain;
+            position: absolute;
+        }
+        .eye {
+            width: 25%;
+            height: 25%;
+            top: 50px;
+            left: 180px;
+            transition: .5s;
+        }
+        .mouth {
+            height: 12%;
+            top: 150px;
+            left: 10px;
+            transition: .5s;
+        }
+        .nose {
+            width: 25%;
+            top: 200px;
+            left: 180px;
+            transition: .5s;
+        }
+        .hand {
+            width: 50%;
+            top: 200px;
+            left: 0px;
+        }
+        
+        .title {
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color:#14213d;
+            margin-top: -20px;
+            margin-left: -5px;
+        }
+        .point {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+        }
+        .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        @media screen and (max-width:375px) {
+            .content-01 {
+                margin-top: 100px;
+            }
+            .prevent-01 {
+                flex-wrap: wrap;
+            }
+            .img-wrap-01 {
+                width: 300px;
+            }
+            .way-01 {
+                height: 200px;
+                margin-right: 0;
+            }
+    
+        }
+        /* content-02 */
+        .content-02 {
+            margin-top: 200px;
+        }
+        .prevent-02 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-02 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-left: 10%; 
+        }
+        .img-wrap-02 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bg-wrap {
+            width: 400px; 
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .person-01 {
+            position: absolute;
+            width: 15%;
+            top: 0;
+            left: 200px;
+            transform: translateX(-50%);
+            transition: .5s;
+        }
+        .person-02 {
+            position: absolute;
+            width: 15%;
+            top: 300px;
+            left: 200px;
+            transform: translateX(-50%);
+            transition: .5s;
+        }
+       
+        .point-02 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+        }
+        .number-02 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        @media screen and (max-width:375px) {
+            .content-02 {
+                margin-top: 100px;
+            }
+            .prevent-02 {
+                flex-wrap: wrap-reverse;
+            }
+            .way-02 {
+                height: 200px;
+                margin-left: 0;
+            }
+            .img-wrap-02 {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+            }
+            .bg-wrap {
+            width: 300px; 
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+        }
+        .person-01 {
+            position: absolute;
+            width: 15%;
+            top: 0;
+            left: 150px;
+            transform: translateX(-50%);
+            transition: .5s;
+        }
+        .person-02 {
+            position: absolute;
+            width: 15%;
+            top: 220px;
+            left: 150px;
+            transform: translateX(-50%);
+            transition: .5s;
+        }
+
+        }
+        /* content-03 */
+        .content-03 {
+            margin-top: 200px;
+        }
+        .prevent-03 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-03 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-right: 10%;
+        }
+        .point-03 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+        }
+        .number-03 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        .img-wrap-03 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .mask {
+            width: 100px;
+            height: 60px;
+            background-color: #ffe66d;
+            border-radius: 15px 15px 50px 50px;
+            position: absolute;
+            top: 130px;
+            left: 200px;
+            transform: translateX(-50%);
+            mix-blend-mode: darken;
+        }
+        .img-wrap-03 > .mask-person {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+        }
+        @media screen and (max-width:375px) {
+            .content-03 {
+                margin-top: 100px;
+            }
+            .prevent-03 {
+                flex-wrap: wrap;
+            }
+            .img-wrap-03 {
+         
+                width: 300px;
+            }
+            .way-03 {
+                height: 200px;
+                margin-right: 0;
+            }
+            .mask {
+                width: 75px;
+                height: 40px;
+                top: 150px;
+                left: 150px;
+
+            }
+    
+        }
+        /* content-04 */
+        .content-04 {
+            margin-top: 200px;
+        }
+        .prevent-04 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-04 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-left: 10%;  
+        }
+        .img-wrap-04 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .plus {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: #ffdd41;
+            font-size: 24px;
+            font-weight: 500;
+            color: #14213d;
+            border: 2px solid #14213d;
+            top: 350px;
+            left: 300px;
+        }
+        .limited {
+            position: absolute;
+            color: #14213d;
+            font-weight: 500;
+            color: #14213d;
+            font-size: 21px;
+            top: 15px;
+            left:200px;
+            transform: translateX(-50%);
+
+        }
+
+        .number-p {
+            position: absolute;
+            color: #14213d;
+            font-weight: 500;
+            color: #14213d;
+            font-size: 48px;
+            top: 50px;
+            left:200px;
+            transform: translateX(-50%);
+        }
+        .img-wrap-04 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .point-04 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        .number-04 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+
+        @media screen and (max-width:375px) {
+            .content-04 {
+                margin-top: 100px;
+            }
+            .prevent-04 {
+                flex-wrap: wrap-reverse;
+            }
+            .way-04 {
+                height: 200px;
+                margin-left: 0;
+            }
+            .img-wrap-04 {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+        }
+            .plus {
+                position: absolute;
+                width: 100px;
+                height: 50px;
+                background-color: #ffdd41;
+                font-size: 24px;
+                font-weight: 500;
+                color: #14213d;
+                border: 1px solid #14213d;
+                top: 250px;
+                left: 200px;
+        }
+        .limited {
+                position: absolute;
+                color: #14213d;
+                font-weight: 500;
+                color: #14213d;
+                font-size: 21px;
+                top: 0px;
+                left: 150px;
+                transform: translateX(-50%);
+
+        }
+        .number-p {
+                position: absolute;
+                color: #14213d;
+                font-weight: 500;
+                color: #14213d;
+                font-size: 48px;
+                top: 25px;
+                left:150px;
+                transform: translateX(-50%);
+        }
+
+        }
+        /* content-05 */
+        .content-05 {
+            margin-top: 200px;
+        }
+        .prevent-05 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-05 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-right: 10%;  
+
+        }
+        .point-05 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+
+        }
+        .number-05 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        .img-wrap-05 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .list {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            transform: translateX(-10%);
+        }
+        .check-list {
+            color: #14213d;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2rem;
+
+        }
+
+
+        .img-wrap-05 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media screen and (max-width:375px) {
+            .content-05 {
+                margin-top: 100px;
+            }
+            .prevent-05 {
+                flex-wrap: wrap;
+            }
+            .img-wrap-05 {
+                margin-top: 50px;
+                width: 300px;
+            }
+            .way-05 {
+                height: 200px;
+                margin-right: 0;
+            }
+            .mask {
+                width: 75px;
+                height: 40px;
+                top: 150px;
+                left: 150px;
+
+            }
+            .list {
+            position: absolute;
+            left: 55px;
+            top: 100px;
+            transform: translateX(-10%);
+        }
+
+        }
+        /* content-6 */
+        .content-06 {
+            margin-top: 200px;
+        }
+        .prevent-06 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-06 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-left: 10%;  
+        }
+        .img-wrap-06 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img-wrap-06 > .sleep { 
+            object-fit: contain;
+        }
+        .sleep {
+            position: relative;
+        }
+        .quilt {
+            position: absolute;
+            width: 60%;
+            top: 100px;
+            left: 100px;
+            transform: rotate(-50deg);
+            transition: .5s;
+        }
+        .aida {
+            position: absolute;
+            width: 55%;
+            top: 10px;
+            left: 110px;
+            transform: rotate(55deg);
+            transition: .5s;
+        }
+        .pillow {
+            position: absolute;
+            width: 40%;
+            top: 10px;
+            left: 140px;
+        }
+        .point-06 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        .number-06 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        @media screen and (max-width:375px) {
+            .content-06 {
+                margin-top: 100px;
+            }
+            .prevent-06 {
+                flex-wrap: wrap-reverse;
+            }
+            .way-06 {
+                height: 200px;
+                margin-left: 0;
+            }
+            .img-wrap-06 {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+            }
+            .quilt {
+            position: absolute;
+            width: 60%;
+            top: 80px;
+            left: 50px;
+            transform: rotate(-50deg);
+            transition: .5s;
+        }
+        .aida {
+            position: absolute;
+            width: 55%;
+            top: 10px;
+            left: 70px;
+            transform: rotate(55deg);
+            transition: .5s;
+        }
+        .pillow {
+            position: absolute;
+            width: 40%;
+            top: 10px;
+            left: 90px;
+        }
+
+        }
+        /* content-7 */
+        .content-07 {
+            margin-top: 200px;
+        }
+        .prevent-07 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-07 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-right: 10%;   
+        }
+        .point-07 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+
+        }
+        .number-07 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        .img-wrap-07 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+        }
+        .bg-wrap-07 {
+            width: 400px; 
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .person-07-1 {
+            position: absolute;
+            width: 20%;
+            top: 10px;
+            left: 10px;
+            animation-duration: 1s;
+
+        }
+        .person-07-2 {
+            position: absolute;
+            width: 20%;
+            top: 10px;
+            left: 60px;
+            animation-duration: 1s;
+        }
+        .person-07-3 {
+            position: absolute;
+            width: 20%;
+            top: 10px;
+            left: 110px;
+            animation-duration: 1s;
+        }
+        .person-07-4 {
+            position: absolute;
+            width: 20%;
+            top: 10px;
+            left: 160px;
+            animation-duration: 1s;
+        }
+        .person-07-5 {
+            position: absolute;
+            width: 20%;
+            left: 10px;
+            top: 100px;
+            animation-duration: 1.1s;
+        }
+        .person-07-6 {
+            position: absolute;
+            width: 20%;
+            left: 60px;
+            top: 100px;
+            animation-duration: 1.1s;
+        }
+        .person-07-7 {
+            position: absolute;
+            width: 20%;
+            left: 110px;
+            top: 100px;
+            animation-duration: 1.1s;
+        }
+        .person-07-8 {
+            position: absolute;
+            width: 20%;
+            left: 160px;
+            top: 100px;
+            animation-duration: 1.1s;
+        }
+        .person-07-9 {
+            position: absolute;
+            width: 20%;
+            left: 60px;
+            top: 200px;
+            animation-duration: 1.2s;
+
+        }
+        .person-07-10 {
+            position: absolute;
+            width: 20%;
+            left: 110px;
+            top: 200px;
+            animation-duration: 1.2s;
+        }
+     
+        .img-wrap-07 > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media screen and (max-width:375px) {
+            .content-07 {
+                margin-top: 100px;
+            }
+            .prevent-07 {
+                flex-wrap: wrap;
+            }
+            .img-wrap-07 {
+                margin-top: 50px;
+                width: 300px;
+            }
+            .way-07 {
+                height: 200px;
+                margin-right: 0;
+            }
+
+        }
+        /* content-08 */
+        .content-08 {
+            margin-top: 200px;
+        }
+        .prevent-08 {
+            display: flex;
+            justify-content: center;
+
+        }
+        .way-08 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-left: 10%; ;    
+        }
+        .img-wrap-08 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+    
+        }
+      
+        .glasses {
+            position: absolute;
+            width: 46.5%;
+            top: 18px;
+            left: 200px;
+            transition: .5s;
+        }
+        .window {
+            position: absolute;
+        }
+        .point-08 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        .number-08 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        @media screen and (max-width:375px) {
+            .content-08 {
+                margin-top: 100px;
+            }
+            .prevent-08 {
+                flex-wrap: wrap-reverse;
+            }
+            .way-08 {
+                height: 200px;
+                margin-left: 0;
+            }
+            .img-wrap-08 {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+    
+            }
+            .glasses {
+                top: 14px;
+                left: 150px;
+
+            }
+
+        }
+        /* content-09 */
+        .content-09 {
+            margin-top: 200px;
+        }
+        .prevent-09 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-09 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-right: 10%;    
+
+        }
+        .point-09 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+            display: block;
+        }
+        .number-09 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        .img-wrap-09 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+           
+        }
+        .detergent {
+            position: absolute;
+            width: 70%;
+            right: 0;
+        }
+        .water {
+            position: absolute;
+            width: 50%;
+            top: 50px;
+            left: -60px;
+        }
+        .virus {
+            width: 50%;
+            position: absolute;
+            top: 150px;
+        }
+        @media screen and (max-width:375px) {
+            .content-09 {
+                margin-top: 100px;
+            }
+            .prevent-09 {
+                flex-wrap: wrap;
+            }
+            .img-wrap-09 {
+                margin-top: 50px;
+                width: 300px;
+            }
+            .way-09 {
+                height: 200px;
+                margin-right: 0;
+            }
+
+        }
+    
+        /* content-10 */
+        .content-10 {
+            margin-top: 200px;
+        }
+        .prevent-10 {
+            display: flex;
+            justify-content: center;
+        }
+        .way-10 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin-left: 10%; ;    
+        }
+        .img-wrap-10 {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .square {
+            position: absolute;
+
+        }
+        .carrot {
+            position: absolute;
+            width: 30%;
+            animation-duration: 1.1s;
+        }
+        .onion {
+            position: absolute;
+            width: 30%;
+            left: 140px;
+            top: 130px;
+            animation-duration: 1.1s;
+            animation-delay: .9s;
+        }
+        .broccie {
+            position: absolute;
+            width: 30%;
+            left: 280px;
+            top:270px;
+            animation-duration: 1.1s;
+            animation-delay: 1.9s;
+        }
+    
+        .point-10 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            line-height: 2.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        .number-10 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #ffdd41;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+        }
+        @media screen and (max-width:375px) {
+            .content-10 {
+                margin-top: 100px;
+            }
+            .prevent-10 {
+                flex-wrap: wrap-reverse;
+            }
+            .way-10 {
+                height: 200px;
+                margin-left: 0;
+            }
+            .img-wrap-10 {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+            }
+            .carrot {
+                position: absolute;
+                width: 30%;
+                animation-duration: 1.1s;
+            }
+            .onion {
+                position: absolute;
+                width: 30%;
+                left: 105px;
+                top: 100px;
+                animation-duration: 1.1s;
+                animation-delay: .9s;
+            }
+            .broccie {
+                position: absolute;
+                width: 30%;
+                left: 205px;
+                top:  205px;
+                animation-duration: 1.1s;
+                animation-delay: 1.9s;
+            }
+            }
+        /* content-11 */
+        .content-11 {
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+
+        }
+        .mohw {
+            margin-right: 109px;
+            width: 400px;
+            height: 73px;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 1px;
+            font-size: 21px;
+            font-weight: 500;
+            background-color: #ffdd41;
+            border: 2px solid #14213d;
+        }
+        .vaccine {
+            width: 400px;
+            height: 73px;
+            color: #14213d;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 1px;
+            font-size: 21px;
+            font-weight: 500;
+            background-color: #ffdd41;
+            border: 2px solid #14213d;
+        }
+        @media screen and (max-width:375px) {
+            .content-11 {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;   
+            }
+            .mohw {
+                margin-right: 0;
+                width: 300px;
+                height: 60px;
+                font-size: 16px;
+                margin-bottom: 30px;
+
+            }
+            .vaccine{
+                width: 300px;
+                font-size: 16px;
+                height: 60px;
+        
+            }
+            .fa-arrow-right  {
+                font-size: 16px;
+            }
+
+        }
+        /* content-12 */
+        .content-12 {
+            margin-top: 100px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+    
+        }
+        .copy-right  {
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width:375px) {
+            .copy-right {
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+        }
+   
+    </style>
+
+</head>
+<body>
+    <div class="all">
+        <nav class="menu">
+            <div class="mobile-header">  
+                <i class="fas fa-times"></i>          
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <a href="./home.html"><img src="./SVG/logo.svg" alt=""></a>
+                </div>
+                <ul class="links">
+                        <li class="covid-19">
+                            <a href="./covid-19.html">認識covid-19</a>
+                        </li>
+                        <li class="how">
+                            <a href="./youcando.html">你可以怎麽做？</a>
+                        </li>
+                        <li class="heart">
+                            <a href="./rebuild.html">從「心」打造</a>
+                        </li>
+                </ul>
+                <div class="social-media">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </nav>
+        <i class="fas fa-bars"></i>  
+        <div class="main">
+            <div class="box">
+                <div class="head">
+                    <h1>\ 你可以怎麼做？ /</h1>
+                </div>
+                <div class="content-01">
+                    <div class="prevent-01">
+                        <div class="way-01">
+                            <h4 class="number">01</h4>
+                            <h2 class="point">維持手部衛生（尤其飯前與如廁後）、手部不清潔時不觸碰眼口鼻</h2>
+                        </div> 
+                            <div class="img-wrap-01">
+                               <img class="eye" src="./SVG/eye-img.svg" alt="">
+                                <img class="mouth" src="./SVG/mouth-img_1.svg" alt="">
+                                <img class="nose" src="./SVG/nose-img_1.svg" alt="">
+                                <img class="hand" src="./SVG/hand-img.svg" alt="">
+                            </div>   
+                    </div>       
+                </div>
+                <div class="content-02">
+                    <div class="prevent-02">
+                            <div class="img-wrap-02">
+                                <img class="person-01" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-02" src="./SVG/person-img_1.svg" alt="">
+                                <div class="bg-wrap">
+                                    <img class="bg-left" src="./SVG/bg-left_1.svg" alt="">
+                                    <img class="bg-right" src="./SVG/bg-right_1.svg" alt="">
+                                </div>
+                            </div>  
+                        <div class="way-02">
+                            <h4 class="number-02">02</h4>
+                            <h2 class="point-02">避免出入公共場所，並維持社交距離（室外1公尺，室內1.5公尺）或佩戴口罩</h2>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-03">
+                    <div class="prevent-03">
+                        <div class="way-03">
+                            <h4 class="number-03">03</h4>
+                            <h2 class="point-03">外出時全程配戴口罩、配合實連制</h2>
+                        </div>  
+                            <div class="img-wrap-03">
+                                <div class="mask"></div>
+                                <img class="mask-person" src="./SVG/mask-img_1.svg" alt="">
+                            </div>   
+                    </div>       
+                </div>
+                <div class="content-04">
+                    <div class="prevent-04">
+                            <div class="img-wrap-04">
+                                <button class="plus">+1</button>
+                                <h5 class="number-p">0</h5>
+                                <h6 class="limited">每日限制人數</h6>
+                                <img class="hospital" src="./SVG/hospital-img_1.svg" alt="">
+                            </div> 
+                        <div class="way-04">
+                                <h4 class="number-04">04</h4>
+                                <h2 class="point-04">減少探病與非緊急醫療需求而前往醫院</h2>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-05">
+                    <div class="prevent-05">
+                        <div class="way-05">
+                            <h4 class="number-05">05</h4>
+                            <h2 class="point-05">居家檢疫、居家隔離或自主健康管理者，請遵守相關規範</h2>
+                        </div>
+                            <div class="img-wrap-05">
+                                <div class="list">
+                                    <p class="check-list">
+                                        <input type="checkbox" name="cbox1" id="first_checkbox">
+                                        <label for="cbox1">每日記錄早晚體溫</label>
+                                    </p>
+                                    <p class="check-list">
+                                        <input type="checkbox" name="cbox2" id="first_checkbox">
+                                        <label for="cbox2">如經醫院安排採檢，<br>&nbsp;&nbsp;&nbsp; 接獲結果前不可外出</label>
+                                    </p>
+                                    <p class="check-list">
+                                        <input type="checkbox" name="cbox3" id="first_checkbox">
+                                        <label for="cbox3">生病期間避免外出</label>
+                                    </p>
+                                    <p class="check-list">
+                                        <input type="checkbox" name="cbox4" id="first_checkbox">
+                                        <label for="cbox4">禁止外出聚餐、聚會</label>
+                                    </p>
+                                </div>
+                                <img src="./SVG/record-img_1.svg" alt="">
+                            </div>   
+                    </div>       
+                </div>
+                <div class="content-06">
+                    <div class="prevent-06">
+                            <div class="img-wrap-06">
+                                <img class="pillow" src="./SVG/pillow-img.svg" alt="">       
+                                <img class="aida" src="./SVG/aida-img.svg" alt="">
+                                <img class="quilt" src="./SVG/quilt-img.svg" alt="">
+                            </div> 
+                        <div class="way-06">
+                            <h4 class="number-06">06</h4>
+                            <h2 class="point-06">身體不適時請停止上班上課，先留在家中觀察、休息</h2>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-07">
+                    <div class="prevent-07">
+                        <div class="way-07">
+                            <h4 class="number-07">07</h4>
+                            <h2 class="point-07">避免群聚，室內禁止5人（包含）以上聚會，室外禁止10人（包含）以上聚會</h2>
+                        </div>
+                        <div class="img-wrap-07">
+
+                            <div class="bg-wrap-07">
+                                <img class="person-07-1" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-2" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-3" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-4" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-5" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-6" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-7" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-8" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-9" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-10" src="./SVG/person-img_1.svg" alt="">
+                                <img class="outdoor" src="./SVG/outdoor-img.svg" alt="">
+                            </div>
+
+                            <div class="bg-wrap-07">
+                                <img class="person-07-1" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-2" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-3" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-4" src="./SVG/person-img_1.svg" alt="">
+                                <img class="person-07-5" src="./SVG/person-img_1.svg" alt="">
+                                <img class="indoor" src="./SVG/indoor-img.svg " alt="">
+                            </div>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-08">
+                    <div class="prevent-08">
+                            <div class="img-wrap-08">
+                                <img class="window" src="./SVG/window-img_1.svg" alt="">
+                                <img class="glasses"src="./SVG/glasses-img.svg" alt="">
+                            </div>  
+                            <div class="way-08">
+                                <h4 class="number-08">08</h4>
+                                <h2 class="point-08">記得要頻繁保持室內通風</h2>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-09">
+                    <div class="prevent-09">
+                        <div class="way-09">
+                            <h4 class="number-09">09</h4>
+                            <h2 class="point-09">做好日常清潔，注重環境打掃，加強消毒減少病菌附著的可能性</h2>
+                        </div> 
+                            <div class="img-wrap-09">
+                                <img class="detergent" src="./SVG/detergent-img.svg" alt="">
+                                <img class="water" src="./SVG/water-img.svg" alt="">
+                                <img class="virus" src="./SVG/virus-img.svg" alt="">
+                            </div>   
+                    </div>       
+                </div>
+                <div class="content-10">
+                    <div class="prevent-10">
+                            <div class="img-wrap-10">
+                                <img class="square" src="./SVG/square.svg" alt="">
+                                <img class="carrot" src="./SVG/carrot.svg" alt="">
+                                <img class="onion" src="./SVG/onion.svg" alt="">
+                                <img class="broccie" src="./SVG/broccie.svg" alt="">
+                            </div>  
+                        <div class="way-10">
+                            <h4 class="number-10">10</h4>
+                            <h2 class="point-10">維持正常的生活作息，除了飲食均衡以外，也要注意口腔衛生</h2>
+                        </div>  
+                    </div>       
+                </div>
+                <div class="content-11">
+                    <button type="button" class="mohw" onclick="location.href='https://www.cdc.gov.tw/Category/List/4x3Ks7o9L_pvqjGI6c5N1Q'">關注最新防疫政策<i class="fas fa-arrow-right"></i></button>
+                    <button type="button" class="vaccine" onclick="location.href='https://www.cdc.gov.tw/Category/Page/V_XD8H6OSUpaTIMWgopkNg'">疫苗政策<i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="content-12">
+                    <p class="copy-right">Copyright © 2021 Chia Ying </p>
+                </div>    
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            // nav
+            $('.fas').on('click',function(){
+               console.log('hi');
+               $('.menu').toggle();
+           });
+            // content-01
+            console.log('eye position',$('.eye').position());
+            console.log('mouth position',$('.mouth').position());
+            console.log('nose position',$('.nose').position());
+
+            const eyeTop = $('.eye').position().top;
+            const eyeleft = $('.eye').position().left;
+
+            $('.eye').mouseenter(function(){
+                $('.eye').css({
+                    top:`${eyeTop + Math.random() * 100}px`,
+                    left:`${eyeleft + Math.random() * 100}px`
+                });
+            });
+
+            const mouthTop = $('.mouth').position().top;
+            const mouthleft = $('.mouth').position().left;
+
+            $('.mouth').mouseenter(function(){
+                $('.mouth').css({
+                    top:`${mouthTop + Math.random() * 100}px`,
+                    left:`${mouthleft + Math.random() * 100}px`
+                });
+            });
+
+            const noseTop = $('.nose').position().top;
+            const noseleft = $('.nose').position().left;
+
+            $('.nose').mouseenter(function(){
+                $('.nose').css({
+                    top:`${noseTop + Math.random() * 100}px`,
+                    left:`${noseleft + Math.random() * 100}px`
+                });
+            });
+            // content-02
+           console.log('person-01 position',$('.person-01').position());
+           console.log('person-02 position',$('.person-02').position());
+
+            const person01Top = $('.person-01').position().top;
+            const person02Top = $('.person-02').position().top;
+
+
+            $('.bg-left').mouseenter(function(){
+                $('.person-01').css({
+                    top:`${person01Top + 100}px`,
+                });
+                $('.person-02').css({
+                    top:`${person02Top - 100}px`,
+                });
+            });
+
+            $('.bg-right').mouseenter(function(){
+                $('.person-01').css({
+                    top:`${person01Top + 50}px`,
+                });
+                $('.person-02').css({
+                    top:`${person02Top - 50}px`,
+                });
+            });
+            // content-03
+            $('.mask-person').mouseenter(function(){
+                $('.mask').css('background','#8ecae6');
+            });
+            $('.mask').mouseenter(function(){
+                $('.mask').css('background','#ffe66d');
+            });
+            // content-04
+            $('.plus').click(function(){
+                // console.log('hi');
+                let h5text =$('.number-p').text();
+                $('.number-p').text(+h5text+1); 
+                if( h5text > 20 ){
+                    console.log('20');
+                    alert('禁止群聚，防疫破口就是你！')
+                }
+            });
+          
+            // content-06
+            $('.img-wrap-06').click(function(){
+                console.log('hi');
+                $('.aida').css('transform','rotate(0)');
+                $('.quilt').css('transform','rotate(0)')
+            });
+            // content-07
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-1').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-1').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-2').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-2').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-3').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-3').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-4').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-4').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-5').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-5').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-6').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-6').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-7').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-7').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-8').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-8').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-9').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-9').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-07').click(function () {
+            console.log('hi');
+
+            $('.person-07-10').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.person-07-10').removeClass('animate__flipInY');
+            });
+            });
+            // animate__animated animate__flip
+            // content-08
+            console.log('glasses position',$('.glasses').position());
+            const glassesLeft = $('.glasses').position().left;
+
+            $('.glasses').click(function(){
+                $('.glasses').css({
+                    left:`${glassesLeft - 183}px`,
+                });
+            });
+            // content-09
+            $('.detergent').dblclick(function(){
+                console.log('hi');
+                $('.virus').toggle();
+            });
+            // content-10
+            $('.img-wrap-10').click(function () {
+            console.log('hi');
+
+            $('.carrot').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.carrot').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-10').click(function () {
+            console.log('hi');
+
+            $('.onion').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.onion').removeClass('animate__flipInY');
+            });
+            });
+            $('.img-wrap-10').click(function () {
+            console.log('hi');
+
+            $('.broccie').addClass('animate__flipInY').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $('.broccie').removeClass('animate__flipInY');
+            });
+            });
+
+
+
+           
+
+
+
+
+
+
+        </script>
+    
+</body>
+</html>
